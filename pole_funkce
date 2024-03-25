@@ -1,0 +1,38 @@
+arrays = ["Ford", "Porsche", "Audi", "BMW", "Mercedes", "Škoda"]
+
+def vypis_pole(prvek):
+    for x in range(len(prvek)):
+       print(f"#{x+1} {prvek[x]}")
+
+vypis_pole(arrays)
+
+otazka = input("Chcete auto odebrat nebo přidat? Zadejte 1 nebo 2: ")
+
+otazka = int(otazka)
+
+if otazka == 1:
+    prvek_plus = input("Zadejte auto, které chcete přidat: ")
+    print(" ")
+    #pridani prvku do pole
+    arrays.append(prvek_plus)
+    vypis_pole(arrays)
+    print(" ")
+
+elif otazka == 2:
+    #odebra pole podle pozice
+    prvek_minus = int(input("Jakou pozici chcete odebrat? "))
+    arrays.pop(prvek_minus)
+    vypis_pole(arrays)
+    print(" ")
+
+    #odebra pole pomoci stringu
+    prvek_minus = str(input("Jaké auto chcete odebrat? "))
+    arrays.remove(prvek_minus)
+    vypis_pole(arrays)
+    print(" ")
+
+elif otazka < 1:
+    print("wtf")
+
+elif otazka > 2:
+    print("wtf")

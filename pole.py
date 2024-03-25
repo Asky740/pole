@@ -14,4 +14,4 @@ arrays = ["Ford", "Porsche", "Audi", "BMW", "Mercedes", "Škoda"]
     #print(arrays[1])
 
 for x in range(6):
-    print("#",1+x, arrays[x])
+    print(f"#{x+1} {arrays[x]}")
