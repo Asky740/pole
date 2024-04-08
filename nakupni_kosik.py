@@ -26,8 +26,8 @@ while len(zbozi) > 0:
 
     if je_cislo(pridani) == True:
         pridani = int(pridani)
-        kosik.append(pridani)
-        zbozi.pop(pridani)
+        kosik.append(pridani-1)
+        zbozi.pop(pridani-1)
 
     elif je_cislo(pridani) == False:
         kosik.append(pridani)
